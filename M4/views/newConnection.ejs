@@ -1,0 +1,50 @@
+
+
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href = "Milestone1.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../assets/styles.css" rel="stylesheet" type="text/css"/>
+<header id = "header">
+
+
+
+
+
+<div class="container">
+<div class ="header" >
+    
+        <nav>
+            <%- include('partials/Header.ejs') %>
+        </nav>
+      
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class = "box">
+            <p class="ConnectionText" >
+                <form class = 'newConnection' method = 'POST'>
+                    <label for="name">Name </label>
+                    <input name="name" type="text" placeholder="Name" value="<%= qs.name %>"><br><br>
+                    <label for="topic">Topic </label>
+                    <input name="topic" type="text" placeholder="Topic" value="<%= qs.topic %>"><br><br>
+                    <label for="details">Details </label>
+                    <textarea name="details" rows="5" cols="15" placeholder="Details" value="<%= qs.details %>"></textarea><br><br>
+                    <label for="loc">Where </label>
+                    <input type="text" placeholder="location" name="location" value="<%= qs.location %>"><br><br>
+                    <label for="time">When </label>
+                    <input type="date" name="Date" value="<%= qs.date %>"><br>
+                    <button type="submit" class="submit">Create Connection</button>
+                
+                </form>
+        </section>
+        </main>
+        <footer>
+            <div class ="footer">
+                <!--Footer with Copy right and Instagram-->
+                <!-- footer left to use CSS to float left-->
+                 
+                <%- include('partials/footer')  -%>
+                 
+           </div>
+           </footer>

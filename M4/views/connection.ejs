@@ -1,0 +1,62 @@
+<title>Connection
+</title>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link href="../assets/styles.css" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For Icons in footer for social media-->
+
+
+
+<header id = "header">
+
+
+
+
+
+<div class="container">
+<div class ="header" >
+    
+        <nav>
+            
+            <%- include('partials/Header.ejs') %>
+            
+        </nav>
+      
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="box">
+            <p class = "ConnectionText">
+                <div class ="boxed">
+                    <img  alt="Dreamhack Atlanta" src="/assets/DH-ATL.jpg"  height="200" class="center">
+
+                <p> <%= connection.name %></p>
+                <p> <%= connection.date %></p>
+                <p> <%= connection.topic %></p>
+                <p class="ConnectionText">
+                    <h2 class = "title2" >Details</h2>
+                    
+                    <p class = "details"> <%= connection.details %> </p>
+                
+                    <div class = "button">
+                        <button type="button" onclick="window.location.href='/connection/rsvp/yes'">Yes</button>
+                        <button type="button" onclick="window.location.href='/connection/rsvp/no'">No</button>
+                        <button type="button" onclick="window.location.href='/connection/rsvp/maybe'">Maybe</button>
+
+
+                    </div>
+
+        </section>
+
+
+    </main>
+    footer>
+            <div class ="footer">
+                <!--Footer with Copy right and Instagram-->
+                <!-- footer left to use CSS to float left-->
+                <%- include('partials/footer')  -%>
+                 
+           </div>
+           </footer>
+       

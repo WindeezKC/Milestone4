@@ -1,0 +1,56 @@
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!-- Link to same CSS for the nav bar and footer, save time/space on CSS for main content-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="../assets/styles.css" rel="stylesheet" type="text/css"/>
+<header id = "header">
+
+
+
+
+
+    <div class="container">
+    <div class ="header" >
+        
+            <nav>
+                
+                <%- include('partials/Header.ejs') %>                
+            </nav>
+          
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="box">
+            <div class = "container">
+                <h1>Welcome to UNCC Esports</h1>
+                <h4>Signup Here!</h4>
+                <div>
+                    <form action = '/signup' method="POST">
+                        <label for="first">First Name</label>
+                        <input id="first" name="first" type="text" placeholder="First Name">
+                        <label for="last">Last Name</label>
+                        <input id="last" name="last" type="text" placeholder="Last Name"><br>
+                        <label for="email">Username</label>
+                        <input id="email" name="email" type="text" placeholder="Username">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="text" placeholder="Password">
+                        <label for="city">City</label>
+                        <input id="city" name="city" type="text" placeholder="City">
+                        <label for="zip">Zip</label>
+                        <input id="zip" name="zip" type="text" placeholder="Zip Code">
+                        <button type="submit" class="login_but">Sign Up</button>
+                    </form>
+                </div>
+                </div>
+                </section>
+                </main>
+
+                <footer>
+                    <div class ="footer">
+                        <!--Footer with Copy right and Instagram-->
+                        <!-- footer left to use CSS to float left-->
+                         
+                        <%- include('partials/footer')  -%>
+                         
+                   </div>
+                   </footer>

@@ -1,0 +1,83 @@
+
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Link to same CSS for the nav bar and footer, save time/space on CSS for main content-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link href="../assets/styles.css" rel="stylesheet" type="text/css"/>
+    <header id = "header">
+    
+    
+    
+    
+    
+        <div class="container">
+        <div class ="header" >
+            
+                <nav>
+                    
+                    <%- include('partials/Header.ejs') %>                
+                </nav>
+              
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section class="box">
+                <div class = "container">
+                        <h3>
+                             Your Connections
+                         
+                           <img  alt="UNCC Esports" src="/assets/uncc-esports-logo.ico" class="center" width="200" height="200">
+                      
+                        </h3>
+                        <h4>
+                            Your Connections
+                        </h4>
+                        <% if(list.length === 0) { %>
+                            <h5>Your connections list is currently empty!</h3>
+                        <% } else { %>
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <th>Connection</th>
+                                    <th>Category</th>
+                                    <th>Going?</th>
+                                    <th></th>
+                                    
+                                </tr>
+                                <% for(let i = 0; i < list.length; i++) { %>
+                                    <tr>
+                                        <td>
+                                            <%= list[i].getDetails() %>
+                                        </td>
+                                        <td>
+                                            <%= list[i].getTopic() %>
+                                        </td>
+                                        <td>
+                                            <%= list[i].getRSVP() %>
+                                        </td>
+                                        <td><button type="button" onclick="window.location.href='/connection/<%= list[i].getID() %>'">Update</button>
+                                            <button type="button" onclick="window.location.href='/connection/delete/<%= list[i].getID() %>'">Delete</button></td>
+                                            </tr>
+                                            <% } %>
+                            </table>
+
+                             </div>
+                             
+                            </h5>
+                </div>
+                <% } %>
+                </section>
+                </main>
+                
+
+                <footer>
+                    <div class ="footer">
+                        <!--Footer with Copy right and Instagram-->
+                        <!-- footer left to use CSS to float left-->
+                         
+                        <%- include('partials/footer')  -%>
+                         
+                   </div>
+                   </footer>
+        

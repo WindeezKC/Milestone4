@@ -1,0 +1,44 @@
+
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href = "Milestone1.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../assets/styles.css" rel="stylesheet" type="text/css"/>
+<header id = "header">
+
+<div class ="header" >
+    
+        <nav>
+            <%- include('partials/Header.ejs') %>
+        </nav>
+      
+            </div>
+        </div>
+    </header>
+    <main>
+        <body>
+               <section class = "box">
+                <p class="ConnectionText" >
+                    <p>Login Here!</p>
+                    <h1>Please enter Username and Password</h1>
+                    <form action='/login' method = 'POST'>
+                        <label for="email">Username</label>
+                        <input id="email" name='email' type="text" placeholder="Username">
+                        <label for="password">Password</label>
+                        <input id="password" name='password' type="text" placeholder="password here"><br>
+                        <button type="submit" class="login">Login</button>
+                    </form>
+                    </p>
+                    </section>
+                    </body>
+                    </main>
+                    <footer>
+                        <div class ="footer">
+                            <!--Footer with Copy right and Instagram-->
+                            <!-- footer left to use CSS to float left-->
+                             
+                            <%- include('partials/footer')  -%>
+                             
+                       </div>
+                       </footer>
+                     
+                     
